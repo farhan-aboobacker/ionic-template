@@ -6,14 +6,11 @@
     echo "workspace :: $WS_NAME"
 
     mkdir "$out"
-    mkdir -p "$out"/.idx
   
-    cp ${./dev.nix} "$out"/.idx/dev.nix
-
-    npx --prefer-offline -y @ionic/cli start "$WS_NAME" blank --type=angular --no-deps --no-git --no-link --no-interactive
+    npx --prefer-offline -y @ionic/cli start "$out" blank --type=angular --no-deps --no-git --no-link --no-interactive
    
-    mv "$WS_NAME" "$out"
-
+    mkdir -p "$out"/.idx
+    cp ${./dev.nix} "$out"/.idx/dev.nix
     chmod -R u+w "$out"
   
     (cd "$out"; npm install --package-lock-only --ignore-scripts)
