@@ -8,6 +8,8 @@
     
         echo "Node.js version: $(node --version)"
         echo "npm version: $(npm --version)"
+        echo "WS Name $WS_NAME"
+        echo "Out $out"
 
          echo "Installing ionic cli..."
          npx --prefer-offline -y @ionic/cli start "$WS_NAME" blank --type=angular --no-deps --no-git --no-link --no-interactive
