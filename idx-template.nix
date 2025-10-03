@@ -5,7 +5,7 @@
     ];
     bootstrap = ''
     
-        echo "Node.js version: $(node -version)"
+        echo "Node.js version: $(node --version)"
         echo "npm version: $(npm --version)"
 
         echo "Installing ionic cli..."
@@ -19,6 +19,6 @@
         cp ${./dev.nix} "$out"/.idx/dev.nix
         chmod -R +w "$out"
        
-        (cd "$out"; npm install --package-lock-only --ignore-scripts)
+       # (cd "$out"; npm install --package-lock-only --ignore-scripts)
     '';
 }
