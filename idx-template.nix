@@ -5,8 +5,8 @@
     pkgs.git
   ];
   bootstrap = ''
-    
-    npx --prefer-offline -y @ionic/cli start "$WS_NAME" blank --type=$environment --no-deps --no-git --no-link --no-interactive
+    echo "Environment ${environment}"
+    npx --prefer-offline -y @ionic/cli start "$WS_NAME" blank --type="$environment" --no-deps --no-git --no-link --no-interactive
     cp -rf ${./.}/${environment} "$WS_NAME"
     chmod -R +w "$WS_NAME"
     mv "$WS_NAME" "$out"
