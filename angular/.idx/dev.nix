@@ -47,7 +47,7 @@
       previews = {
         web = {
           # Use ionic serve instead of npm start for better development experience
-          command = ["ionic" "serve" "--port" "$PORT" "--host" "0.0.0.0" "--no-open"];
+          command = ["npm" "run" "start" "--" "--port" "$PORT" "--host" "0.0.0.0"];
           manager = "web";
         };
       };
