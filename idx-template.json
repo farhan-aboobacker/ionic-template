@@ -4,8 +4,8 @@
     "categories": [
       "Web", "Mobile"
     ],
-    "icon": "https://www.gstatic.com/monospace/231115/logo_angular.svg"
-     "publisher": "Google LLC",
+    "icon": "https://www.gstatic.com/monospace/231115/logo_angular.svg",
+    "publisher": "Google LLC",
   "params": [
     {
       "id": "environment",

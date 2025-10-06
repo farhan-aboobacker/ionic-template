@@ -27,7 +27,7 @@
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
         # Install Ionic CLI globally
-        install-ionic = "npm install -g @ionic/cli";
+        # install-ionic = "npm install -g @ionic/cli";
         # Install project dependencies
         npm-install = "npm ci --no-audit --prefer-offline --no-progress --timing || npm i --no-audit --no-progress --timing";
         # Open editors for the following files by default, if they exist:
@@ -37,7 +37,7 @@
       # To run something each time the workspace is (re)started, use the `onStart` hook
       onStart = {
         # Ensure Ionic CLI is available on restart
-        ensure-ionic = "command -v ionic > /dev/null || npm install -g @ionic/cli";
+        # ensure-ionic = "command -v ionic > /dev/null || npm install -g @ionic/cli";
       };
     };
     
