@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, environment ? "angular" ... }: {
   channel = "stable-25.05";
   packages = [
     pkgs.nodejs_24 
@@ -6,7 +6,7 @@
   ];
   bootstrap = ''
     
-    npx --prefer-offline -y @ionic/cli start "$WS_NAME" blank --type=react --no-deps --no-git --no-link --no-interactive
+    npx --prefer-offline -y @ionic/cli start "$WS_NAME" blank --type=environment --no-deps --no-git --no-link --no-interactive
     mkdir -p "$WS_NAME"/.idx
     cp ${./dev.nix} "$WS_NAME"/.idx/dev.nix
     mv "$WS_NAME" "$out"
