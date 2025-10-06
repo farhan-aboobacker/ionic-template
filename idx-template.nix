@@ -1,4 +1,4 @@
-{ pkgs, type ? angular, ... }: {
+{ pkgs, type ? "angular", ... }: {
   channel = "stable-25.05";
   packages = [
     pkgs.nodejs_24 
