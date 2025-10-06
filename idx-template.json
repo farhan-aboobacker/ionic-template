@@ -15,7 +15,7 @@
       "options": {
         "angular": "Angular",
         "react": "React",
-        "vue": "Vue",
+        "vue": "Vue"
       }
     }]
 }
