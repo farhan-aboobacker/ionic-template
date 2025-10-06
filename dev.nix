@@ -13,8 +13,7 @@
   # Sets environment variables in the workspace
   env = {
     # Ensure npm global packages are in PATH
-    NPM_CONFIG_PREFIX = "$HOME/.npm-global";
-    PATH = "$HOME/.npm-global/bin:$PATH";
+   
   };
   
   idx = {
