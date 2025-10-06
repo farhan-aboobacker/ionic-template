@@ -6,6 +6,7 @@ let
   vue = "vue"
 }
 projectType = typeMap.${type} or angular;
+in
  {
   channel = "stable-25.05";
   packages = [
