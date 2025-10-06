@@ -8,8 +8,8 @@
     "publisher": "Google LLC",
   "params": [
     {
-      "id": "environment",
-      "name": "Environment",
+      "id": "type",
+      "name": "Framework",
       "type": "enum",
       "default": "angular",
       "options": {
