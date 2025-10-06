@@ -1,4 +1,4 @@
-{ pkgs, environment ? "angular", ... }: {
+{ pkgs, type ? angular, ... }: {
   channel = "stable-25.05";
   packages = [
     pkgs.nodejs_24 
@@ -6,7 +6,7 @@
   ];
   bootstrap = ''
     echo "Environment ${environment}"
-    npx --prefer-offline -y @ionic/cli start "$WS_NAME" blank --type="$environment" --no-deps --no-git --no-link --no-interactive
+    npx --prefer-offline -y @ionic/cli start "$WS_NAME" blank --type=$type --no-deps --no-git --no-link --no-interactive
     cp -rf ${./.}/${environment} "$WS_NAME"
     chmod -R +w "$WS_NAME"
     mv "$WS_NAME" "$out"
