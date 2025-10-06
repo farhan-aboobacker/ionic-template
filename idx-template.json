@@ -5,4 +5,17 @@
       "Web", "Mobile"
     ],
     "icon": "https://www.gstatic.com/monospace/231115/logo_angular.svg"
+     "publisher": "Google LLC",
+  "params": [
+    {
+      "id": "environment",
+      "name": "Environment",
+      "type": "enum",
+      "default": "angular",
+      "options": {
+        "angular": "Angular",
+        "react": "React",
+        "vue": "Vue",
+      }
+    }]
 }
