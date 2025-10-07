@@ -7,7 +7,7 @@
   ];
   bootstrap = ''
     echo "Environment ${type}"
-    npx --prefer-offline -y @ionic/cli start "$WS_NAME" blank --type=${type} --no-deps --no-git --no-link --no-interactive
+    npx --prefer-offline -y @ionic/cli start "$WS_NAME" blank --type="$type" --no-deps --no-git --no-link --no-interactive
     cp -rf ${./.}/${type}/. "$WS_NAME"
     chmod -R +w "$WS_NAME"
     mv "$WS_NAME" "$out"
