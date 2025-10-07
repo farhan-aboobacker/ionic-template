@@ -3,7 +3,6 @@
   channel = "stable-25.05";
   packages = [
     pkgs.nodejs_24 
-    pkgs.git
   ];
   bootstrap = ''
     echo "Environment ${type}"
