@@ -1,12 +1,12 @@
 {% set perPackageManager = {
     "angular": {
-        "openFiles": "src/app/app.component.ts"
+        "openFiles": ["src/app/app.component.ts"]
     },
     "react": {
-        "openFiles": "src/App.tsx"
+        "openFiles": ["src/App.tsx"]
     },
     "vue": {
-        "openFiles":  "src/main.ts"
+        "openFiles":  ["src/main.ts"]
     },
 }[type]%}# To learn more about how to use Nix to configure your environment
 # see: https://developers.google.com/idx/guides/customize-idx-env
@@ -45,7 +45,7 @@
         # Install project dependencies
         npm-install = "npm ci --no-audit --prefer-offline --no-progress --timing || npm i --no-audit --no-progress --timing";
         # Open editors for the following files by default, if they exist:
-        default.openFiles = [{{perPackageManager.openFiles}}];
+        default.openFiles = {{perPackageManager.openFiles}};
       };
       
       # To run something each time the workspace is (re)started, use the `onStart` hook
