@@ -9,7 +9,7 @@
     npx --prefer-offline -y @ionic/cli start "$WS_NAME" blank --type="${type}" --no-deps --no-git --no-link --no-interactive
     chmod -R +w "$WS_NAME"
     mv "$WS_NAME" "$out"
-    packageManager=${packageManager} j2 ${./devNix.j2} -o "$out/.idx/dev.nix"
+    type=${type} j2 ${./devNix.j2} -o "$out/.idx/dev.nix"
     chmod -R u+w "$out"
     (cd "$out"; npm install --package-lock-only --ignore-scripts)
   '';
